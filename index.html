@@ -1,0 +1,203 @@
+<!--
+我们要实现一个小说阅读器，需要实现以下功能：
+1. 显示特定的嵌入代码式小说内容，包括章节标题和正文。
+2. 支持显示Markdown格式的小说内容。
+3. 支持显示小说的封面图片。
+4. 支持显示小说的作者和简介。
+5. 拥有美观的界面，给读者一种清爽的阅读体验。
+6. CSS和HTML综合到一个html里面。
+7. 背景为图片。
+8. 超链接字体为浅蓝色且无下划线。
+9. 文字左对齐且向中间偏移，而且换行处也向中间偏移。
+10. 章节标题居中。
+11. 所以文字的背景色均为白色
+12. 分割线不会拉伸到文字显示处外
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>小说《小U传》</title>
+    <!--图标-->
+    <link rel="icon" href="https://cdn.luogu.com.cn/upload/image_hosting/hjyj2k1j.png">
+    <style>
+        body {
+            background-image: url("https://s3.bmp.ovh/imgs/2025/02/27/359f511f147434e8.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        a {
+            color: rgb(57, 197, 187);
+            text-decoration: none;
+        }
+
+        p {
+            text-align: left;
+            text-indent: 2em;
+            margin-left: 15%;
+            margin-right: 15%;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .box {
+            border: 1px solid #fff;
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            opacity: 0.8;
+        }
+
+        hr {
+            border: 0.5px solid #fff;
+            margin: 20px;
+        }
+
+        audio {
+            display: none;
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <audio
+        src="https://web.opendrive.com/api/v1/download/file.json/NjBfMTc0MjUxMzA2Xw?temp_key=%13%DFA%00%01%05%04%2F%02%13%80C%F7%91%3A%F7%A0%7D%10PB%F4Q%3A%F4+%00%13%AFC%03%91%3C%04_%7C%13%AF%7C%00Q%3C%04_%3B%13%9F%04%04%11%05%04%2FE%9A%9D&inline=1"
+        id="aud" autoplay="autoplay" controls="controls" preload="auto" loop="loop"></audio>
+    <h1>小U传 - 人物图鉴</h1>
+    <p>作者：<a href="https://www.luogu.com.cn/user/772815">一咕咕一</a></p>
+    <p>欢迎一波互关。</p>
+    <p>然后膜拜EveryOne。</p>
+    <p>srO 你 Orz</p>
+    <!--插入图片-->
+    <p>打赏作者：</p>
+    <img src="https://cdn.luogu.com.cn/upload/image_hosting/ygk0i34l.png?x-oss-process=image/resize,m_lfit,h_170,w_225">
+    <p>虽说是图鉴，但没图…………（已经花重金请了美术组，敬请期待！！！）</p>
+    <h1>No.1 小U</h1>
+    <p>原名：John Underwood</p>
+    <p>护身符：铀化物·爆裂散星（射·符）</p>
+    <p>介绍：男主，性格严谨，做事细致不鲁莽。</p>
+    <p>护身符介绍：运用物理 +
+        玄学的力量，会将粘附的物体的材质改变，使其拥有像放射性元素“铀”的性质，但裂变时的威力（也就是释放的能量）没有铀那么大，而符本身会化成中子，与被改变物体发生裂变反应，形成爆炸。（省流：便捷式小威力核弹）</p>
+    <p>特殊器官：鹰之眼。</p>
+    <h1>No.2 小M</h1>
+    <p>原名：Alice Meiskar</p>
+    <p>护身符：旋梦·樱之风</p>
+    <p>介绍：女主，相貌美丽，<del>似乎和小U是天生一对</del>，是天神梅锡卡氏十五世。。</p>
+    <p>护身符介绍：在粘附位置形成一阵强力龙卷风，同时附带樱花瓣，可以把人抛起到约 3 米的位置在空中悬浮 2 分钟。</p>
+    <p>特殊器官：燕之眉。</p>
+    <h1>No.3 小E</h1>
+    <p>原名：Kitty Echus</p>
+    <p>护身符：无理数·鹰与鹅之舞（水·符）</p>
+    <p>介绍：女，见多识广，一名合格的冒险家。</p>
+    <p>护身符介绍：在符粘附的位置会生成一片汹涌澎湃的湖面，据说这水是从巢湖借过来的，因为湖面的万米巨浪变化无常，于是起名曰“无理数”。</p>
+    <p>特殊器官：狼之耳。</p>
+    <h1>No.4 小X</h1>
+    <p>原名：Qihang Xu【为了纪念我的同学】</p>
+    <p>护身符：虚无·喜怒交加（力·符）</p>
+    <p>介绍：男，虽然有些好色，但做事果断，敢一马当先。</p>
+    <p>护身符介绍：一般符会贴在人身上，此时的被施者会变得喜怒无常，一般持续 3 天后会慢慢痛苦的死去，最后化为灰烬，如果在过程中小E停止施法或被护身符被干扰，那么被施者就会再得性命。</p>
+    <p>特殊器官：熊之口。</p>
+    <h1>No.5 小H</h1>
+    <p>原名：Yoli Hasi</p>
+    <p>介绍：女，虽然不是梅锡卡氏的勇士，但也愿意同小U一起冒险。</p>
+    <script>
+        !function () {
+            function n(n, e, t) {
+                return n.getAttribute(e) || t
+            }
+
+            function e(n) {
+                return document.getElementsByTagName(n)
+            }
+
+            function t() {
+                var t = e("script"), o = t.length, i = t[o - 1];
+                return { l: o, z: n(i, "zIndex", -1), o: n(i, "opacity", .5), c: n(i, "color", "0,0,0"), n: n(i, "count", 99) }
+            }
+
+            function o() {
+                a = m.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth, c = m.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+            }
+
+            function i() {
+                r.clearRect(0, 0, a, c);
+                var n, e, t, o, m, l;
+                s.forEach(function (i, x) {
+                    for (i.x += i.xa, i.y += i.ya, i.xa *= i.x > a || i.x < 0 ? -1 : 1, i.ya *= i.y > c || i.y < 0 ? -1 : 1, r.fillRect(i.x - .5, i.y - .5, 1, 1), e = x + 1; e < u.length; e++) n = u[e], null !== n.x && null !== n.y && (o = i.x - n.x, m = i.y - n.y, l = o * o + m * m, l < n.max && (n === y && l >= n.max / 2 && (i.x -= .03 * o, i.y -= .03 * m), t = (n.max - l) / n.max, r.beginPath(), r.lineWidth = t / 2, r.strokeStyle = "rgba(" + d.c + "," + (t + .2) + ")", r.moveTo(i.x, i.y), r.lineTo(n.x, n.y), r.stroke()))
+                }), x(i)
+            }
+
+            var a, c, u, m = document.createElement("canvas"), d = t(), l = "c_n" + d.l, r = m.getContext("2d"),
+                x = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function (n) {
+                    window.setTimeout(n, 1e3 / 45)
+                }, w = Math.random, y = { x: null, y: null, max: 2e4 };
+            m.id = l, m.style.cssText = "position:fixed;top:0;left:0;z-index:" + d.z + ";opacity:" + d.o, e("body")[0].appendChild(m), o(), window.onresize = o, window.onmousemove = function (n) {
+                n = n || window.event, y.x = n.clientX, y.y = n.clientY
+            }, window.onmouseout = function () {
+                y.x = null, y.y = null
+            };
+            for (var s = [], f = 0; d.n > f; f++) {
+                var h = w() * a, g = w() * c, v = 2 * w() - 1, p = 2 * w() - 1;
+                s.push({ x: h, y: g, xa: v, ya: p, max: 6e3 })
+            }
+            u = s.concat([y]), setTimeout(function () {
+                i()
+            }, 100)
+        }();
+    </script>
+    <script>
+        (function () {
+            var a_idx = 0;
+            window.onclick = function (event) {
+                var a = new Array("乘风归九天", "纵横于七海", "览遍数千秋", "踏过万里路", "寻遍三千界", "度过万千劫", "阅过万卷书", "书遍千万字", "访过万亿友", "赏多态婵娟", "目睹日生落", "百度千凡尘");
+                var heart = document.createElement("b");
+                heart.onselectstart = new Function('event.returnValue=false');
+                document.body.appendChild(heart).innerHTML = a[a_idx];
+                a_idx = (a_idx + 1) % a.length;
+                heart.style.cssText = "position: fixed;left:-100%;";
+                var f = 16,
+                    x = event.clientX - f / 2,
+                    y = event.clientY - f,
+                    c = randomColor(),
+                    a = 1,
+                    s = 1.2;
+
+                var timer = setInterval(function () {
+                    if (a <= 0) {
+                        document.body.removeChild(heart);
+                        clearInterval(timer);
+                    } else {
+                        heart.style.cssText = "font-size:16px;cursor: default;position: fixed;color:" +
+                            c + ";left:" + x + "px;top:" + y + "px;opacity:" + a + ";transform:scale(" +
+                            s + ");";
+
+                        y--;
+                        a -= 0.016;
+                        s += 0.002;
+                    }
+                }, 15)
+
+            }
+            function randomColor() {
+
+                return "rgb(" + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + "," + (~~(Math
+                    .random() * 255)) + ")";
+
+            }
+        }());
+    </script>
+</body>
